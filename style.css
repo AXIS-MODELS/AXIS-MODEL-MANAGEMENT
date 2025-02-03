@@ -1,0 +1,393 @@
+/* General styles */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Forum&family=Gloock&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Gloock', serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+/* Header styles */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img{
+    height: 160px;
+    margin-left: 35px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li{
+    margin-right: 70px;
+    font-family: 'Playfair display', serif;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: black;
+    transition: ease 0.2s;
+}
+
+.nav-links a:hover{
+    color: rgb(162, 138, 0);
+}
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span{
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    margin-right: 50px;
+}
+
+/* Landing page */
+.landing {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    text-align: center;
+}
+
+.landing h1{
+    font-size: 3rem;
+    font-family: 'Forum', serif;
+    text-align: center;
+    letter-spacing: 4px;
+   opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards, spacing 2s ease-in-out forwards;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes spacing{
+    from{ letter-spacing: 10px; }
+    to { letter-spacing: 4px; }
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+/* Models section */
+.models {
+    padding: 30px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#models{
+    width: 100%;
+}
+
+.models-title{
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Forum', serif;
+    text-align: center;
+}
+
+.models-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.women-section, .men-section{
+    flex: 1 1 45%;
+    min-width: 300px;
+    text-align: center;
+    width: 100%;
+}
+
+.women-section h3, .men-section h3{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.models-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.model-card{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+
+.model-card img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.models-container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+#women-models, #men-models {
+    flex: 1;
+}
+
+.models h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.model-page{
+    opacity: 0;
+    animation: fadeIn 4.6s forwards;
+}
+
+@keyframes fadeIn{
+    to {
+        opacity: 1;
+    }
+}
+
+.portfolio-images img{
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.portfolio-images img:hover{
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.models-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.model-card{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.model-card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.model-card:hover img{
+    filter: grayscale(0%);
+}
+
+.model-card .name{
+    position: absolute;
+    bottom: 0;
+    color: rgb(162, 138, 0);
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.model-card:hover .name{
+    opacity: 1;
+}
+
+/*Contact section*/
+.contact{
+    margin-top: 95px;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#insta{
+    font-size: 30px;
+    font-family: 'Gloock', sans-serif;
+}
+
+.contact-container h1{
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: 'Gloock', sans-serif;
+}
+
+.contact-container p{
+    font-size: 20px;
+    margin-bottom: 10px 0;
+    font-family: 'Forum', sans-serif;
+}
+
+.contact-container a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Forum', sans-serif;
+}
+
+.contact-container a:hover{
+    text-decoration: underline;
+    color: rgb(162,138,0);
+}
+
+/* Model personal page */
+.model-page {
+    padding: 190px 20px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.model-name{
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-family: 'Forum', sans-serif;
+}
+
+/* Model header section */
+.model-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.model-details{
+    flex: 1;
+    max-width: 300px;
+    text-align: left;
+    font-family: 'Forum', sans-serif;
+}
+
+/* Headshot */
+.headshot{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.model-header >*{
+    flex: 0 1 auto;
+}
+
+/* Model details */
+.model-details{
+    flex: 1;
+}
+
+.model-details h2{
+    margin-bottom: 10px;
+}
+
+/* Horizontal divider */
+.divider-horizontal {
+    height: 4px;
+    background-color: black;
+    width: 100%;
+    margin: 40px 0;
+}
+
+/* Portfolio section */
+.model-portfolio {
+    text-align: center;
+}
+
+/* Portfolio images in a 2x2 grid */
+.portfolio-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.portfolio-images img{
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .models-container-wrapper{
+        flex-direction: column;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
