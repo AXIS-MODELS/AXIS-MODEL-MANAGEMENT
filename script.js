@@ -21,7 +21,7 @@ const realModels = [
         height: "6'3",
         stats: '39-32-40',
         location: 'Dublin, Ireland',
-        portfolio_images: ['IMAGES/ISAAC HEADSHOT.jpeg', 'IMAGES/ISAAC 1.jpeg', 'IMAGES/ISAAC 2.jpeg', 'IMAGES/ISAAC 3.jpeg'],
+        portfolio_images: ['ISAAC/ISAAC HEADSHOT.jpeg', 'ISAAC/ISAAC 1.jpeg', 'ISAAC/ISAAC 2.jpeg', 'ISAAC/ISAAC 3.jpeg'],
     },
 
     {
@@ -31,7 +31,7 @@ const realModels = [
         height: "6'3",
         stats: '39-32-40',
         location: 'Dublin, Ireland',
-        portfolio_images: ['IMAGES/MURPHY 1.jpeg', 'IMAGES/MURPHY 5.jpg', 'IMAGES/MURPHY 3.jpeg', 'IMAGES/MURPHY 4.jpg'],
+        portfolio_images: ['MURPHY/MURPHY 1.jpeg', 'MURPHY/MURPHY 5.jpg', 'MURPHY/MURPHY 3.jpeg', 'MURPHY/MURPHY 4.jpg'],
     },
 
     {
@@ -41,7 +41,7 @@ const realModels = [
         height: "5'9",
         stats: '35-29-39',
         location: 'Dublin, Ireland',
-        portfolio_images: ['IMAGES/DUKE HEADSHOT.jpg', 'IMAGES/DUKE 1.JPG', 'IMAGES/DUKE 2.JPG', 'IMAGES/DUKE 3.JPG', 'IMAGES/DUKE 4.JPG'],
+        portfolio_images: ['DUKE/DUKE HEADSHOT.jpg', 'DUKE/DUKE 1.JPG', 'DUKE/DUKE 2.JPG', 'DUKE/DUKE 3.JPG', 'DUKE/DUKE 4.JPG'],
     },
 
     // Women
@@ -52,7 +52,7 @@ const realModels = [
         height: "5'11",
         stats: '80-34-100', //change to inches
         location: 'Athlone, Ireland',
-        portfolio_images: ['IMAGES/NICOLA 6.jpg', 'IMAGES/NICOLA 5.jpg', 'IMAGES/NICOLA 3.jpg', 'IMAGES/NICOLA 1.jpg', 'IMAGES/NICOLA 2.jpg']
+        portfolio_images: ['NICOLA/NICOLA 6.jpg', 'NICOLA/NICOLA 5.jpg', 'NICOLA/NICOLA 3.jpg', 'NICOLA/NICOLA 1.jpg', 'NICOLA/NICOLA 2.jpg']
     },
 
     {
@@ -62,7 +62,7 @@ const realModels = [
         height: "5'3",
         stats: '85-69-75', //change to inches
         location: 'Clare, Ireland',
-        portfolio_images: ['IMAGES/LEILANI 1.jpg', 'IMAGES/LEILANI 2.jpg', 'IMAGES/LEILANI 3.jpg', 'IMAGES/LEILANI 4.jpg', 'IMAGES/LEILANI 5.jpg']
+        portfolio_images: ['LEILANI/LEILANI 1.jpg', 'LEILANI/LEILANI 2.jpg', 'LEILANI/LEILANI 3.jpg', 'LEILANI/LEILANI 4.jpg', 'LEILANI/LEILANI 5.jpg']
     },
 
     {
@@ -72,7 +72,7 @@ const realModels = [
         height: "5'8",
         stats: '33-23-35',
         location: 'Limerick, Ireland',
-        portfolio_images: ['IMAGES/MICHAELA HEADSHOT.jpeg', 'IMAGES/MICHAELA 1.jpeg', 'IMAGES/MICHAELA 2.jpeg', 'IMAGES/MICHAELA 3.jpg', 'IMAGES/MICHAELA 4.jpg']
+        portfolio_images: ['MICHAELA/MICHAELA HEADSHOT.jpeg', 'MICHAELA/MICHAELA 1.jpeg', 'MICHAELA/MICHAELA 2.jpeg', 'MICHAELA/MICHAELA 3.jpg', 'MICHAELA/MICHAELA 4.jpg']
     },
 ];
 
