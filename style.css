@@ -367,6 +367,23 @@ header{
     border-radius: 3px;
 }
 
+.pdf-container{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.pdf-container a{
+    font-size: 18px;
+    font-family: 'Playfair Display', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+.pdf-container a:hover{
+    text-decoration: underline;
+    color: rgb(162, 138, 0);
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .models-container-wrapper{
