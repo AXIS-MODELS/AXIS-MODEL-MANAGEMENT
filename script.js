@@ -41,7 +41,7 @@ const realModels = [
         height: "5'9",
         stats: '35-29-39',
         location: 'Dublin, Ireland',
-        portfolio_images: ['DUKE/DUKE HEADSHOT.jpg', 'DUKE/DUKE 1.JPG', 'DUKE/DUKE 2.JPG', 'DUKE/DUKE 3.JPG', 'DUKE/DUKE 4.JPG'],
+        portfolio_images: ['DUKE/DUKE 5.jpg'],
     },
 
     // Women
