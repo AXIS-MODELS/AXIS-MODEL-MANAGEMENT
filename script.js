@@ -54,26 +54,6 @@ const realModels = [
         location: 'Athlone, Ireland',
         portfolio_images: ['NICOLA/NICOLA 6.jpg', 'NICOLA/NICOLA 5.jpg', 'NICOLA/NICOLA 3.jpg', 'NICOLA/NICOLA 1.jpg', 'NICOLA/NICOLA 2.jpg']
     },
-
-    {
-        id: 4,
-        name: 'Leilani K',
-        gender: 'Female',
-        height: "5'3",
-        stats: '85-69-75', //change to inches
-        location: 'Clare, Ireland',
-        portfolio_images: ['LEILANI/LEILANI 1.jpg', 'LEILANI/LEILANI 2.jpg', 'LEILANI/LEILANI 3.jpg', 'LEILANI/LEILANI 4.jpg', 'LEILANI/LEILANI 5.jpg']
-    },
-
-    {
-        id: 6,
-        name: 'Michaela P',
-        gender: 'Female',
-        height: "5'8",
-        stats: '33-23-35',
-        location: 'Limerick, Ireland',
-        portfolio_images: ['MICHAELA/MICHAELA HEADSHOT.jpeg', 'MICHAELA/MICHAELA 1.jpeg', 'MICHAELA/MICHAELA 2.jpeg', 'MICHAELA/MICHAELA 3.jpg', 'MICHAELA/MICHAELA 4.jpg']
-    },
 ];
 
 // Display models
