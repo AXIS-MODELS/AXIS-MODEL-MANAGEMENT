@@ -3,12 +3,31 @@ if (window.location.pathname.endsWith("index.html")) {
 }
 
 // Hamburger menu
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const closeBtn = document.querySelector(".close-btn");
+    const navItems = document.querySelector(".navItem");
 
-hamburger.addEventListener('click', () => {
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.add("active");
+    });
 
-    navLinks.classList.toggle('active');
+    closeBtn.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+
+    navItems.forEach(item => {
+        item.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!navLinks.contains(event.target) && !hamburger.contains(event.target)){
+            navLinks.classList.remove("active");
+        }
+    });
 });
 
 // Model data
@@ -21,7 +40,7 @@ const realModels = [
         height: "6'3",
         stats: '39-32-40',
         location: 'Dublin, Ireland',
-        portfolio_images: ['ISAAC/ISAAC HEADSHOT.jpeg', 'ISAAC/ISAAC 1.jpeg', 'ISAAC/ISAAC 2.jpeg', 'ISAAC/ISAAC 3.jpeg'],
+        portfolio_images: ['ISAAC/ISAAC HEADSHOT.jpeg'],
     },
 
     {
@@ -31,7 +50,7 @@ const realModels = [
         height: "6'3",
         stats: '39-32-40',
         location: 'Dublin, Ireland',
-        portfolio_images: ['MURPHY/MURPHY 1.jpeg', 'MURPHY/MURPHY 5.jpg', 'MURPHY/MURPHY 3.jpeg', 'MURPHY/MURPHY 4.jpg'],
+        portfolio_images: ['MURPHY/MURPHY 1.jpeg'],
     },
 
     {
@@ -49,10 +68,14 @@ const realModels = [
         id: 3,
         name: 'Nicola P',
         gender: 'Female',
-        height: "5'11",
-        stats: '80-34-100', //change to inches
-        location: 'Athlone, Ireland',
-        portfolio_images: ['NICOLA/NICOLA 6.jpg', 'NICOLA/NICOLA 5.jpg', 'NICOLA/NICOLA 3.jpg', 'NICOLA/NICOLA 1.jpg', 'NICOLA/NICOLA 2.jpg']
+        portfolio_images: ['NICOLA/NICOLA 6.jpg'],
+    },
+
+    {
+        id: 4,
+        name: 'Leilani K',
+        gender: 'Female',
+        portfolio_images: ['LEILANI/LEILANI 1.jpg'],
     },
 ];
 

@@ -64,6 +64,10 @@ header{
     margin-right: 50px;
 }
 
+button{
+    display: none;
+}
+
 /* Landing page */
 .landing {
     height: 100vh;
@@ -387,16 +391,39 @@ header{
     .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
+        width: 100vw;
+        height: 100vh;
         background-color: white;
-        position: absolute;
-        top: 70px;
+        justify-content: center;
+        text-align: center;
+        z-index: 999;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+        position: fixed;
+        top: 0;
         left: 0;
-        padding: 20px;
     }
 
     .nav-links.active {
         display: flex;
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        font-size: 1.5rem;
+    }
+
+    .close-btn{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: black;
     }
 
     .hamburger {
