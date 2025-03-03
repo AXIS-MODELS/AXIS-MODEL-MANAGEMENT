@@ -43,39 +43,12 @@ const realModels = [
         portfolio_images: ['ISAAC/ISAAC HEADSHOT.jpeg'],
     },
 
-    {
-        id: 2,
-        name: 'Murphy A',
-        gender: 'Male',
-        height: "6'3",
-        stats: '39-32-40',
-        location: 'Dublin, Ireland',
-        portfolio_images: ['MURPHY/MURPHY 1.jpeg'],
-    },
-
-    {
-        id: 5,
-        name:'Duke M',
-        gener: 'Male',
-        height: "5'9",
-        stats: '35-29-39',
-        location: 'Dublin, Ireland',
-        portfolio_images: ['DUKE/DUKE 5.jpg'],
-    },
-
     // Women
     {
         id: 3,
         name: 'Nicola P',
         gender: 'Female',
         portfolio_images: ['NICOLA/NICOLA 6.jpg'],
-    },
-
-    {
-        id: 4,
-        name: 'Leilani K',
-        gender: 'Female',
-        portfolio_images: ['LEILANI/LEILANI 1.jpg'],
     },
 ];
 
