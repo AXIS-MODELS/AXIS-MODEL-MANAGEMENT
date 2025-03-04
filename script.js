@@ -11,45 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const dropdownMenu = document.querySelector(".dropdown-menu");
     const menuLinks = document.querySelectorAll(".nav-links li a:not(.models-toggle");
 
-    document.addEventListener("DOMContentLoaded", function(){
-        const dropdowns = document.querySelectorAll(".nav-item.dropdown");
-
-        function isMobile(){
-            return window.innerWidth <= 768;
-        }
-
-        dropdowns.forEach(dropdown => {
-            const dropdownMenu = dropdown.querySelector(".dropdown-menu");
-
-            dropdown.addEventListener("mouseenter", function() {
-                if (!isMobile()) {
-                    dropdownMenu.computedStyleMap.display = "block";
-                }
-            });
-
-            dropdown.addEventListener("mouseleave", function() {
-                if (!isMobile()) {
-                    dropdownMenu.computedStyleMap.display = "none";
-                }
-            });
-
-            dropdown.addEventListener("click", function(event) {
-                if (isMobile()) {
-                    event.preventDefault();
-                    dropdownMenu.classList.toggle("active");
-                }
-            });
-        });
-
-        document.addEventListener("click", function(event){
-            dropdowns.forEach(dropdown => {
-                if (!dropdown.contains(event.target) && isMobile()) {
-                    dropdown.querySelector(".dropdown-menu").classList.remove("active");
-                }
-            });
-        });
-    });
-
     //open menu
     hamburger.addEventListener("click", () => {
         navLinks.classList.add("active");
