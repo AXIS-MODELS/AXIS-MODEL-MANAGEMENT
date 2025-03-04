@@ -178,7 +178,7 @@ const realModels = [
         id: 2,
         name: 'Nicola P',
         gender: 'Female',
-        portfolio_images: ['NICOLA/img_4383.jpg'],
+        portfolio_images: ['NICOLA/IMG_4383.jpg'],
     },
 
     {
