@@ -131,17 +131,96 @@ const realModels = [
         name: 'Isaac A',
         gender: 'Male',
         height: "6'3",
-        stats: '39-32-40',
+        stats: '35-30-40',
         location: 'Dublin, Ireland',
-        portfolio_images: ['ISAAC/ISAAC HEADSHOT.jpeg'],
+        portfolio_images: ['ISAAC/IMG_3714.JPG'],
+    },
+
+    {
+        id: 3,
+        name: 'Callum M',
+        gender: 'Male',
+        height: "6'3",
+        stats: '38-33-42',
+        location: 'Dublin, Ireland',
+        portfolio_images: ['CALLUM/IMG_3945.jpg'],
+    },
+
+    {
+        id: 5,
+        name: 'Markuss B',
+        gender: 'Male',
+        height: "6'1",
+        stats: '35-30-39',
+        location: 'Dublin, Ireland',
+        portfolio_images: ['MARKUSS/IMG_4290.jpg'],
+    },
+
+    {
+        id: 7,
+        name: 'Tolu E',
+        gender: 'Male',
+        height: "6'1",
+        stats: '33-27-39',
+        location: 'Dublin, Ireland',
+        portfolio_images: ['TOLU/IMG_4067.JPG']
+    },
+
+    {
+        id: 9,
+        name: 'Hugo P',
+        gender: 'Male',
+        portfolio_images: ['HUGO/IMG_3536.jpg'],
     },
 
     // Women
     {
-        id: 3,
+        id: 2,
         name: 'Nicola P',
         gender: 'Female',
-        portfolio_images: ['NICOLA/NICOLA 6.jpg'],
+        portfolio_images: ['NICOLA/img_4383.jpg'],
+    },
+
+    {
+        id: 4,
+        name: 'Tyra I',
+        gender: 'Female',
+        portfolio_images: ['TYRA/IMG_3590.JPG'],
+    },
+
+    {
+        id: 6,
+        name: 'Veronica C',
+        gender: 'Female',
+        portfolio_images: ['VERONICA/IMG_4573.jpg'],
+    },
+
+    {
+        id: 8,
+        name: 'Esther S',
+        gender: 'Female',
+        portfolio_images: ['ESTHER/IMG_4404.JPG'],
+    },
+
+    {
+        id: 10,
+        name: 'Jorah A',
+        gender: 'Female',
+        portfolio_images: ['JORAH/IMG_4822.JPG'],
+    },
+
+    {
+        id: 12,
+        name: 'Chisomaga A',
+        gender: 'Female',
+        portfolio_images: ['CHISOMAGA/IMG_2325.JPG'],
+    },
+
+    {
+        id: 14,
+        name: 'Mimi B',
+        gender: 'Female',
+        portfolio_images: ['MIMI/DSC_8998.jpeg'],
     },
 ];
 
@@ -155,24 +234,27 @@ function displayModels() {
         return;
     }
 
-    realModels.forEach(model => {
+    const sortedModels = realModels.sort((a, b) => a.name.localeCompare(b.name));
+
+
+    sortedModels.forEach(model => {
         const modelCard = document.createElement('div');
         modelCard.className = 'model-card';
         modelCard.innerHTML = `
             <img src="${model.portfolio_images[0]}" alt="${model.name}">
             <div class="name">${model.name}</div>
-            `;
+        `;
 
-            modelCard.addEventListener('click', () => {
-                let modelName = model.name.toLowerCase().replace(/[^a-z0-9-]/g, "-");
-                window.location.href = `/${modelName}.html`; //Redirect to personal page
-            });
+        modelCard.addEventListener('click', () => {
+            let modelName = model.name.toLowerCase().replace(/[^a-z0-9-]/g, "-");
+            window.location.href = `/${modelName}.html`; // Redirect to personal page
+        });
 
-            if (model.gender === 'Female' && womenModelsContainer){
-                womenModelsContainer.appendChild(modelCard);
-            } else if (model.gender === 'Male' && menModelsContainer){
-                menModelsContainer.appendChild(modelCard);
-            }
+        if (model.gender === 'Female' && womenModelsContainer) {
+            womenModelsContainer.appendChild(modelCard);
+        } else if (model.gender === 'Male' && menModelsContainer) {
+            menModelsContainer.appendChild(modelCard);
+        }
     });
 }
 
