@@ -42,6 +42,87 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".portfolio-images img");
+    const overlay = document.createElement("div");
+    overlay.classList.add("fullscreen-overlay");
+
+    const fullscreenImg = document.createElement("img");
+    overlay.appendChild(fullscreenImg);
+
+    const closeBtn = document.createElement("span");
+    closeBtn.classList.add("close-btn");
+    closeBtn.innerHTML = "&times;";
+    overlay.appendChild(closeBtn);
+
+    const prevBtn = document.createElement("div");
+    prevBtn.classList.add("nav-btn", "prev-btn");
+    prevBtn.innerHTML = "&#10094;";
+    overlay.appendChild(prevBtn);
+
+    const nextBtn = document.createElement("div");
+    nextBtn.classList.add("nav-btn", "next-btn");
+    nextBtn.innerHTML = "&#10095;";
+    overlay.appendChild(nextBtn);
+
+    document.body.appendChild(overlay);
+
+    let currentIndex = 0;
+
+    images.forEach((image, index) => {
+        image.addEventListener("click", function () {
+            currentIndex = index;
+            fullscreenImg.src = this.src;
+            overlay.style.display = "flex";
+        });
+    });
+
+    closeBtn.addEventListener("click", function () {
+        overlay.style.display = "none";
+    });
+
+    overlay.addEventListener("click", function(event) {
+        if (event.target !== fullscreenImg && !event.target.classList.contains("nav-btn")) {
+
+            overlay.style.display = "none";
+        }
+    });
+
+    function updateImage(index) {
+        if (index >= 0 && index < images.length) {
+            fullscreenImg.src = images[index].src;
+            currentIndex = index;
+        }
+    }
+
+    nextBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+        updateImage((currentIndex + 1) % images.length);
+    });
+
+    prevBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+        updateImage((currentIndex - 1 + images.length) % images.length);
+    });
+
+    images.forEach(image => {
+        image.addEventListener("click", function () {
+            fullscreenImg.src = this.src;
+            overlay.style.display = "flex";
+        });
+    });
+
+    closeBtn.addEventListener("click", function () {
+        overlay.style.display = "none";
+    });
+
+    overlay.addEventListener("click", function (event) {
+        if (event.target !== fullscreenImg) {
+            overlay.style.display = "none";
+        }
+    });
+});
+
 // Model data
 const realModels = [
     // Men
